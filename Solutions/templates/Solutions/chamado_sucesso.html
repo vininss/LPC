@@ -1,15 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Chamado cadastrado</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
 </head>
 <body>
     <h1>Obrigado!</h1>
     <h2>Seu chamado foi registrado com sucesso.</h2>
+    <br>
+    <form action="/" style="float: left;"><button class="botton">Visualizar chamados</button></form>
 </body>
 </html>
