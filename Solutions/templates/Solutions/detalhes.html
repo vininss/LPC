@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Detalhes do Chamado</title>
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+</head>
+<body>
+    <div class="menu">
+        <h1 class="h1">Sistema de chamados da FC Solutions</h1>        
+    </div>
+    <div class="detalhes">
+        <h3>CH{{chamado.id}}BR</h3><br>
+        <p>{{chamado.titulo}}</p><br>
+        <p>{{chamado.autor.nome}}</p><br>
+        <p>{{chamado.descricao}}</p><br>
+        <p>{{chamado.telefone}}</p><br>
+        <p>{{chamado.data_abertura}}</p><br>
+        <p>{{chamado.categoria.nome}}</p><br>
+        <p>{{chamado.status.nome}}</p><br>
+        
+        <form action="/" style="float: left;"><button class="botton">Voltar</button></form>        
+        <form action="/atendimento" style="float: left;"><button class="botton">Registrar Atendimento</button></form>
+
+        {% for atendimento in atendimentos %}        
+            <p>{{atendimento.autor}} </p>
+        {% endfor %}
+    
+    </div>    
+    
+</body>
+</html>

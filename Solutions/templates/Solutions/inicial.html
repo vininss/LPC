@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Inicial</title>
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+</head>
+<body>
+    <div class="menu">
+        <h1 class="h1">Sistema de chamados da FC Solutions</h1>
+        {% if user.is_authenticated %}            
+            <form style="float: right;" action="{% url 'logout' %}">
+                <button class="botton">Sair</button> 
+            </form>
+            <p class="logged-in-p" style="float: right;">
+                Olá {{ user.username }} seja bem vindo!            
+            </p> 
+             
+        {% endif %}
+        
+    </div>
+    
+    
+    {% for chamado in chamados %}        
+        <a href="detalhes/{{ chamado.id }}"><p>Codigo: CH{{chamado.id}}BR - {{chamado.descricao}} - {{chamado.data_abertura}} - {{chamado.status.nome}}</p></a>
+    {% endfor %}
+    <br>
+    <form action="/chamado" style="float: left;"><button class="botton">Novo Chamado</button></form>
+
+</body>
+</html>
