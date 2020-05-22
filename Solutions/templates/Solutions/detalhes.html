@@ -12,14 +12,14 @@
         <h1 class="h1">Sistema de chamados da FC Solutions</h1>        
     </div>
     <div class="detalhes">
-        <h3>CH{{chamado.id}}BR</h3><br>
-        <p>{{chamado.titulo}}</p><br>
-        <p>{{chamado.autor.nome}}</p><br>
-        <p>{{chamado.descricao}}</p><br>
-        <p>{{chamado.telefone}}</p><br>
-        <p>{{chamado.data_abertura}}</p><br>
-        <p>{{chamado.categoria.nome}}</p><br>
-        <p>{{chamado.status.nome}}</p><br>
+        <h3>Codigo: CH{{chamado.id}}BR</h3><br>
+        <p>Titulo: {{chamado.titulo}}</p><br>
+        <p>Autor: {{chamado.autor.nome}}</p><br>
+        <p>Descrição: {{chamado.descricao}}</p><br>
+        <p>Telefone: {{chamado.telefone}}</p><br>
+        <p>Data: {{chamado.data_abertura}}</p><br>
+        <p>Categoria: {{chamado.categoria.nome}}</p><br>
+        <p>Status: {{chamado.status.nome}}</p><br>
         
         <form action="/" style="float: left;"><button class="botton">Voltar</button></form>        
         <form action="/atendimento" style="float: left;"><button class="botton">Registrar Atendimento</button></form>
