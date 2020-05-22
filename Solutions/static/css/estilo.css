@@ -3,17 +3,33 @@
     text-decoration: none;
     margin: auto;  
 }
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 30px;
+}
+
+form, h1, h2, h3, p{
+    padding-left: 10px;
+}
+
+input, select, textarea{
+    border: 1px;
+    border-style: solid;
+    background-color: whitesmoke;
+}
 .botton{
     background-color: white;
     color: black;
     border: 2px solid;
     margin-right: 10px;
+    margin-left: 10px;
     float: left;
 
 }
 .botton:hover{
     background-color:gray;
 }
+
 
 h1{
     color:white;
